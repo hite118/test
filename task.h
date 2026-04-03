@@ -11,7 +11,7 @@
 
 #ifndef __TASK_H__
 #define __TASK_H__
-
+#define Verson "0.0.1"
 
 #include <stdio.h>
 #include <stdint.h>
@@ -86,7 +86,7 @@ typedef struct __task__ {
 	callback  event;
 } task_t;
 
-/*Update(2024-08-26) ½Å·Ú¼º°Ë»ç : task -> task->arg º¯°æÇÔ */
+/*Update(2024-08-26) ï¿½Å·Ú¼ï¿½ï¿½Ë»ï¿½ : task -> task->arg ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 static inline int task_create(task_t *task, void *(*func) (void *), void *arg)
 {
 	int err;
@@ -118,7 +118,7 @@ static inline int task_delete(task_t *task)
 }
 #endif
 
-/*Update(2024-08-26) ½Å·Ú¼º°Ë»ç : task_exit ÇÔ¼ö°¡ »ç¿ëµÇÁö ¾ÊÀ½  */
+/*Update(2024-08-26) ï¿½Å·Ú¼ï¿½ï¿½Ë»ï¿½ : task_exit ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  */
 /*
 static inline int task_exit(task_t *task)
 {
@@ -130,8 +130,8 @@ static inline int task_exit(task_t *task)
 }
 */
 
-/*Update(2024-08-26) ½Å·Ú¼º°Ë»ç : task_event ÇÔ¼ö°¡ »ç¿ëµÇÁö ¾ÊÀ½  */
-/*Update(2024-08-26) ½Å·Ú¼º°Ë»ç : identifier sigval´Â »óÀ§ scope¿¡ Á¸ÀçÇÏ´Â µ¿ÀÏÇÑ identifier¸¦ °¡¸² signal -> signal_value */
+/*Update(2024-08-26) ï¿½Å·Ú¼ï¿½ï¿½Ë»ï¿½ : task_event ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  */
+/*Update(2024-08-26) ï¿½Å·Ú¼ï¿½ï¿½Ë»ï¿½ : identifier sigvalï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ scopeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ identifierï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ signal -> signal_value */
 /*
 static inline void task_event(task_t *task, int sig)
 {
@@ -147,8 +147,8 @@ static inline void task_event(task_t *task, int sig)
 }
 */
 
-/*Update(2024-08-26) ½Å·Ú¼º°Ë»ç : task_event_ptr ÇÔ¼ö°¡ »ç¿ëµÇÁö ¾ÊÀ½  */
-/*Update(2024-08-26) ½Å·Ú¼º°Ë»ç : identifier sigval´Â »óÀ§ scope¿¡ Á¸ÀçÇÏ´Â µ¿ÀÏÇÑ identifier¸¦ °¡¸² signal -> signal_value */
+/*Update(2024-08-26) ï¿½Å·Ú¼ï¿½ï¿½Ë»ï¿½ : task_event_ptr ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  */
+/*Update(2024-08-26) ï¿½Å·Ú¼ï¿½ï¿½Ë»ï¿½ : identifier sigvalï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ scopeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ identifierï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ signal -> signal_value */
 /*
 static inline void task_event_ptr(task_t *task, void *sig)
 {
@@ -188,8 +188,8 @@ static inline void *task_argument(task_t *task)
  * - callback: void timer_callback (sigval_t) { ... }
  */
 
-/*Update(2024-08-26) ½Å·Ú¼º°Ë»ç : identifier callback´Â »óÀ§ scope¿¡ Á¸ÀçÇÏ´Â µ¿ÀÏÇÑ identifier¸¦ °¡¸² callback -> p_callback */
-/*Update(2024-08-26) ½Å·Ú¼º°Ë»ç : timer_create2 ÇÔ¼ö°¡ »ç¿ëµÇÁö ¾ÊÀ½ */
+/*Update(2024-08-26) ï¿½Å·Ú¼ï¿½ï¿½Ë»ï¿½ : identifier callbackï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ scopeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ identifierï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ callback -> p_callback */
+/*Update(2024-08-26) ï¿½Å·Ú¼ï¿½ï¿½Ë»ï¿½ : timer_create2 ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 /*
 static inline int timer_create2(timer_t *handle, void *p_callback,
 		void *arg, int sec, unsigned int nsec)
